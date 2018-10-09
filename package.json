@@ -1,0 +1,43 @@
+{
+  "name": "d3-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate site using webpack and d3.js",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shelby-/d3-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "d3",
+    "data-viz",
+    "webpack"
+  ],
+  "author": "shelby wilson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vurvco/vurvco.github.io/issues"
+  },
+  "homepage": "vurvco.github.io/network-viz",
+  "scripts": {
+    "build": "webpack -d",
+    "start": "webpack-dev-server --hot --progress --colors --inline"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^0.28.9",
+    "csv-loader": "^3.0.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "d3": "^5.7.0"
+  }
+}
