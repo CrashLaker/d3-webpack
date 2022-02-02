@@ -480,6 +480,14 @@ const g2 = svg.append('g')
       .each(function(d){
         let obj = d3.select(this)
         renderRect(obj, 5, 5, d.width, d.height, {rx: 3, ry: 3})
+        obj.selectAll('circle')
+          .data([1,2,3])
+          .enter()
+          .append('circle')
+            .attr('r', 25)
+            .attr('fill', 'steelblue')
+            .attr('cx', (d2,i) => d.width/4*(i+1) + 5)
+            .attr('cy', 80)
       })
 
 
@@ -611,8 +619,8 @@ d3.select('#renderJSON').on('click', function(){
 			...healthListWidget,
 			x: bcr.x,
 			y: bcr.y,
-			width: 20,
-			height: 20,
+			width: bcr.width,
+			height: bcr.height,
 		})
 	})
 
