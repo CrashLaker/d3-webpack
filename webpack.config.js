@@ -21,7 +21,10 @@ const webpackConfig = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-typescript'],
+                }
             },
             {
                 test: /\.scss$/,
@@ -60,12 +63,15 @@ const webpackConfig = {
 
 webpackConfig.devServer = {
     contentBase: Path.join(__dirname, './src/'),
-    publicPath: 'http://localhost:7000/',
+    publicPath: 'http://codeserver:8121',
+    public: 'http://codeserver:8121',
+    host: '0.0.0.0',
     hot: true,
-    port: 7000,
+    port: 8080,
     inline: true,
     progress: true,
     historyApiFallback: true,
+    disableHostCheck: true,
 };
 
 module.exports = webpackConfig;
